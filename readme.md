@@ -1,0 +1,169 @@
+# Directory Manager CLI
+
+![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20MacOS-lightgrey.svg)
+
+A powerful command-line interface for managing hierarchical directory structures. Built with Python, it offers an intuitive and colorful interface for creating, deleting, moving, and visualizing directory trees. Perfect for system administrators, developers, and anyone who needs to manage complex directory structures efficiently.
+
+## Table of Contents
+- [Directory Manager CLI](#directory-manager-cli)
+  - [Table of Contents](#table-of-contents)
+  - [Quick Start](#quick-start)
+  - [Features](#features)
+  - [Usage](#usage)
+    - [Commands](#commands)
+  - [Example Output](#example-output)
+  - [Installation](#installation)
+    - [System Requirements](#system-requirements)
+  - [Common Issues \& Solutions](#common-issues--solutions)
+  - [Future Enhancements](#future-enhancements)
+  - [Version History](#version-history)
+  - [License](#license)
+
+## Quick Start
+```bash
+git clone https://github.com/yourusername/directory-manager.git
+cd directory-manager
+python main.py
+```
+
+## Features
+
+- **Create Directories**
+  - Single or multiple directories at once
+  - Support for nested paths
+  - Batch creation using comma-separated values
+  - Example: `c fruits/citrus/lemon,lime,orange`
+
+- **Delete Directories**
+  - Safe deletion with confirmation for non-empty directories
+  - Recursive deletion of subdirectories
+  - Root directory protection
+
+- **Move Directories**
+  - Move directories with all their contents
+  - Automatic creation of parent directories
+  - Protection against moving to subdirectories
+
+- **List Directory Structure**
+  - Tree-like visualization
+  - Proper indentation
+  - Alphabetical sorting
+  - Colorized output
+
+## Usage
+
+### Commands
+Each command can be executed using:
+- The number (1-6)
+- The full word (create, delete, etc.)
+- The first letter (c, d, etc.)
+
+1. Create
+   ```bash
+   1
+   create
+   c
+   
+   Examples:
+   c family
+   c fruits,vegetables,grains
+   c fruits/citrus/lemon,lime
+   ```
+
+2. Delete
+   ```bash
+   2
+   delete
+   d
+   
+   Examples:
+   d family
+   d fruits/citrus
+   ```
+
+3. Move
+   ```bash
+   3
+   move
+   m
+   
+   Examples:
+   m source destination
+   m fruits/citrus vegetables/
+   ```
+
+4. List
+   ```bash
+   4
+   list
+   l
+   ```
+
+5. Help
+   ```bash
+   5
+   help
+   h
+   ```
+
+6. Exit
+   ```bash
+   6
+   exit
+   e
+   ```
+
+## Example Output
+```
+list/
+├── documents/
+│   ├── work/
+│   └── personal/
+└── media/
+    ├── photos/
+    └── videos/
+```
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/directory-manager.git
+cd directory-manager
+
+# Run the program
+python main.py
+```
+
+### System Requirements
+- Python 3.10 or higher
+- Terminal with ANSI color support
+- Git (for installation)
+
+## Common Issues & Solutions
+- **Permission Errors**: Run with appropriate permissions
+- **Color Not Showing**: Ensure terminal supports ANSI colors
+- **Path Issues**: Use forward slashes (/) even on Windows
+
+## Future Enhancements
+
+- [ ] Rename command
+- [ ] Search functionality
+- [ ] Copy command
+- [ ] Command history
+- [ ] Undo functionality
+- [ ] Save/load from JSON
+- [ ] Auto-completion
+- [ ] Support for spaces in directory names
+
+## Version History
+- v1.0.0 (October 28, 2024)
+  - Initial release
+  - Basic CRUD operations
+  - Tree visualization
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
